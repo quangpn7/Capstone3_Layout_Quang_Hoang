@@ -1,0 +1,70 @@
+section.product {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 46px;
+  .product__header {
+    h1 {
+      @include styleText($fs-4, $fw-2, $color-black);
+      margin-bottom: 89px;
+    }
+  }
+  .product__content {
+    padding: 0 32px;
+    .product__grid {
+      gap: 67px;
+      justify-content: center;
+    }
+    .product__item {
+      background-color: $color-light-gray;
+      width: 334px;
+      .item-upper {
+        img {
+          display: block;
+          padding: 45px 57px 30px 57px;
+        }
+        .item-text {
+          padding-left: 23px;
+          padding-right: 23px;
+
+          p {
+            @include styleText($fs-3, $fw-1, $color-black);
+            margin-bottom: 8px !important;
+          }
+          span {
+            display: block;
+            @include styleText($fs-2, $fw-1, $color-gray-description);
+            margin-bottom: 13px !important;
+          }
+        }
+      }
+      .item-bottom {
+        display: inline;
+
+        .btn {
+          width: 50%;
+
+          padding: 17px 0;
+
+          background-color: $color-yellow-darker;
+          color: $color-black;
+          @include styleText($fs-3, $fw-4, $color-black);
+
+          &:hover {
+            color: $color-white;
+          }
+        }
+        .item-price.btn {
+          background-color: $color-gray !important;
+          padding-left: 70px !important;
+          @include styleText($fs-3, $fw-3, $color-black);
+        }
+      }
+    }
+  }
+}
+
+// RESET BOOSTRAP THIS GRID
+.col {
+  flex-grow: 0 !important;
+  padding: 0 !important;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Detail</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME 4 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- MAIN FONT (INTER)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css-> font-family: 'Inter', sans-serif; -->
+    <!-- MASTER CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header__wrap">
+        <div
+          class="header__content d-flex justify-content-between align-items-center"
+        >
+          <div class="header__logo">
+            <a href="/index.html"
+              ><img src="./assets/img/image 3.png" alt="logoCybersoft"
+            /></a>
+          </div>
+          <div class="header__feature d-flex align-items-center">
+            <i class="fa fa-shopping-cart"></i>
+            <div>
+              <span id="item_count">(0)</span>
+            </div>
+            <span><a href="#" id="btnLogin">Login</a></span>
+            <span><a href="./register.html" id="btnRegister">Register</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- NAV -->
+    <section class="navigation">
+      <div class="navigation__wrap">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="btnHome">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btnMen" value="men">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btnWoman" value="women">Woman</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btnKid">Kid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btnSport">Sport</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- PRODUCT DETAIL -->
+    <section class="product">
+      <div class="product__wrap row">
+        <div class="product__left col-5">
+          <img
+            id="productImage"
+            class="product__frame"
+            src="./assets/img/image 5.png"
+            alt=""
+          />
+        </div>
+        <div class="product__right col-7">
+          <!-- INFO -->
+          <div class="product__info">
+            <h1 id="productName">Product name</h1>
+            <p id="productDesc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              pariatur sequi esse ducimus veritatis aspernatur totam inventore,
+              tempore rem impedit illum qui a quae aperiam officiis, error
+              repellat sunt nulla! ( Thuộc tính Description)
+            </p>
+          </div>
+          <!-- SIZE -->
+          <div class="product__size" id="productSizeHolder">
+            <span class="product__sizeStatus">Available size</span>
+            <div id="productSizeHolder">
+              <button class="size__button btn btn-pressed">38</button
+              ><button class="size__button btn">39</button
+              ><button class="size__button btn">40</button
+              ><button class="size__button btn">41</button
+              ><button class="size__button btn">42</button>
+            </div>
+          </div>
+          <!-- PRICE AND SELECTION -->
+          <div class="product__price">
+            <span class="product__price" id="productPrice">85$</span>
+            <div class="product__addRemove">
+              <button
+                id="addCount"
+                class="btn btn-addRemove"
+                onclick="countProduct(true)"
+              >
+                +
+              </button>
+              <input
+                type="number"
+                min="1"
+                max="20"
+                class="product__buyCount"
+                id="count"
+                value="1"
+                onchange="resetCount(value)"
+              />
+              <button
+                id="removeCount"
+                class="btn btn-addRemove"
+                onclick="countProduct(false)"
+              >
+                -
+              </button>
+              <button class="btn btn-addToCart" onclick="addCart()">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- REALATED PRODUCT -->
+    <section class="product">
+      <div class="product__header">
+        <h1 class="text-center text-capitalize">-related product-</h1>
+      </div>
+      <div class="product__content">
+        <div class="product__grid row" id="productHolder">
+          <div class="product__item col">
+            <div class="item-upper">
+              <img src="./assets/img/image 5.png" alt="itemImg" />
+              <div class="item-text">
+                <p>Adidas Prophere</p>
+                <span>short descript...</span>
+              </div>
+            </div>
+            <div class="item-bottom d-flex align-items-center">
+              <a href="#" class="btn">Buy now</a>
+              <span class="item-price btn">85$</span>
+            </div>
+          </div>
+          <div class="product__item col">
+            <div class="item-upper">
+              <img src="./assets/img/image 5.png" alt="itemImg" />
+              <div class="item-text">
+                <p>Adidas Prophere</p>
+                <span>short descript...</span>
+              </div>
+            </div>
+            <div class="item-bottom d-flex align-items-center">
+              <a href="#" class="btn">Buy now</a>
+              <span class="item-price btn">85$</span>
+            </div>
+          </div>
+          <div class="product__item col">
+            <div class="item-upper">
+              <img src="./assets/img/image 5.png" alt="itemImg" />
+              <div class="item-text">
+                <p>Adidas Prophere</p>
+                <span>short descript...</span>
+              </div>
+            </div>
+            <div class="item-bottom d-flex align-items-center">
+              <a href="#" class="btn">Buy now</a>
+              <span class="item-price btn">85$</span>
+            </div>
+          </div>
+          <div class="product__item col">
+            <div class="item-upper">
+              <img src="./assets/img/image 5.png" alt="itemImg" />
+              <div class="item-text">
+                <p>Adidas Prophere</p>
+                <span>short descript...</span>
+              </div>
+            </div>
+            <div class="item-bottom d-flex align-items-center">
+              <a href="#" class="btn">Buy now</a>
+              <span class="item-price btn">85$</span>
+            </div>
+          </div>
+          <div class="product__item col">
+            <div class="item-upper">
+              <img src="./assets/img/image 5.png" alt="itemImg" />
+              <div class="item-text">
+                <p>Adidas Prophere</p>
+                <span>short descript...</span>
+              </div>
+            </div>
+            <div class="item-bottom d-flex align-items-center">
+              <a href="#" class="btn">Buy now</a>
+              <span class="item-price btn">85$</span>
+            </div>
+          </div>
+          <div class="product__item col">
+            <div class="item-upper">
+              <img src="./assets/img/image 5.png" alt="itemImg" />
+              <div class="item-text">
+                <p>Adidas Prophere</p>
+                <span>short descript...</span>
+              </div>
+            </div>
+            <div class="item-bottom d-flex align-items-center">
+              <a href="#" class="btn">Buy now</a>
+              <span class="item-price btn">85$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <section class="footer">
+        <div class="footer__wrap">
+          <!-- ROW 1 -->
+          <div class="footer__row-1">
+            <div class="row footer__row">
+              <div class="footer__block col-4">
+                <h4>GET HELP</h4>
+                <ul class="list-unstyled">
+                  <li class="footer__liLink"><a href="#">Contact us</a></li>
+                  <li class="footer__liLink"><a href="#">Shopping</a></li>
+                  <li class="footer__liLink"><a href="#">NikeID</a></li>
+                  <li class="footer__liLink"><a href="#">Nike+</a></li>
+                </ul>
+              </div>
+              <div class="footer__block col-4">
+                <h4>ORDERS</h4>
+                <ul class="list-unstyled">
+                  <li class="footer__liLink">
+                    <a href="#">Payment options</a>
+                  </li>
+                  <li class="footer__liLink">
+                    <a href="#">Shipping and delivery</a>
+                  </li>
+                  <li class="footer__liLink"><a href="#">Returns</a></li>
+                </ul>
+              </div>
+              <div class="footer__block col-4">
+                <h4>REGISTER</h4>
+                <p>
+                  Create one account to mangage everything you do with Nike,
+                  from your shipping preferences to your Nike+ activity.
+                </p>
+                <a href="./register.html" class="footer__redirectLink"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- ROW 2 -->
+          <div class="footer__row-2">
+            <div class="row footer__row">
+              <div class="footer__block col-4">
+                <h4>EMAIL SIGN UP</h4>
+                <p>
+                  Be the first to know about new products and special offers.
+                </p>
+                <a href="./register.html" class="footer__redirectLink"
+                  >Sign up now</a
+                >
+              </div>
+              <div class="footer__block col-4">
+                <h4>GIFT CARD</h4>
+                <p>Give the gift that always fits.</p>
+                <a href="#" class="footer__redirectLink">View cards</a>
+              </div>
+              <div class="footer__block col-4">
+                <h4>STORES NEAR YOU</h4>
+                <p>Locate a Nike retail store or authorized retailer.</p>
+                <a href="" class="footer__redirectLink">Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AXIOS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./controllers/detail.js"></script>
+  </body>
+</html>
