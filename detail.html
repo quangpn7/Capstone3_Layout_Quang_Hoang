@@ -83,7 +83,7 @@
         <div class="product__left col-5">
           <img
             id="productImage"
-            class="product__frame"
+            class="product__frame w-100"
             src="./assets/img/image 5.png"
             alt=""
           />
@@ -114,13 +114,7 @@
           <div class="product__price">
             <span class="product__price" id="productPrice">85$</span>
             <div class="product__addRemove">
-              <button
-                id="addCount"
-                class="btn btn-addRemove"
-                onclick="countProduct(true)"
-              >
-                +
-              </button>
+              <button id="addCount" class="btn btn-addRemove">+</button>
               <input
                 type="number"
                 min="1"
@@ -128,18 +122,9 @@
                 class="product__buyCount"
                 id="count"
                 value="1"
-                onchange="resetCount(value)"
               />
-              <button
-                id="removeCount"
-                class="btn btn-addRemove"
-                onclick="countProduct(false)"
-              >
-                -
-              </button>
-              <button class="btn btn-addToCart" onclick="addCart()">
-                Add to cart
-              </button>
+              <button id="removeCount" class="btn btn-addRemove">-</button>
+              <button class="btn btn-addToCart">Add to cart</button>
             </div>
           </div>
         </div>
@@ -325,7 +310,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <script src="./controllers/detail.js"></script>
   </body>
 </html>

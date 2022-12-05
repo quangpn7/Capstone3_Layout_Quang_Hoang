@@ -58,29 +58,13 @@
       <div class="navigation__wrap">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
-              >Home</a
-            >
+            <a class="nav-link" href="#" id="btnHome">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              id="btnMen"
-              value="men"
-              onclick="renderCategory('men')"
-              >Men</a
-            >
+            <a class="nav-link" href="#" id="btnMen" value="men">Men</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              id="btnWoman"
-              value="women"
-              onclick="renderCategory('women')"
-              >Woman</a
-            >
+            <a class="nav-link" href="#" id="btnWoman" value="women">Woman</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="btnKid">Kid</a>
@@ -99,24 +83,14 @@
         <div class="register__left col-md-6 col-lg-6>">
           <!-- EMAIL -->
           <div class="register__email input-field">
-            <input
-              id="email"
-              type="email"
-              placeholder="Email"
-              onchange="removeAsterisk(this,'#emailRequired')"
-            />
+            <input id="email" type="email" placeholder="Email" />
             <span id="emailRequired" class="inputRequired">(*)</span>
           </div>
           <p class="register__invalid" id="emailErr"></p>
 
           <!-- PASSWORD -->
           <div class="register__password input-field">
-            <input
-              id="password"
-              type="password"
-              placeholder="Password"
-              onchange="removeAsterisk(this,'#passRequired')"
-            />
+            <input id="password" type="password" placeholder="Password" />
             <span id="passRequired" class="inputRequired">(*)</span>
           </div>
           <p class="register__invalid" id="passErr">* Mật khẩu không hợp lệ</p>
@@ -126,7 +100,6 @@
               id="confirmPassword"
               type="password"
               placeholder="Confirm password"
-              onchange="removeAsterisk(this,'#passConRequired')"
             />
             <span id="passConRequired" class="inputRequired">(*)</span>
           </div>
@@ -139,24 +112,14 @@
         <div class="register__right col-md-6 col-lg-6">
           <!-- NAME -->
           <div class="register__name input-field">
-            <input
-              id="name"
-              type="text"
-              placeholder="Name"
-              onchange="removeAsterisk(this,'#nameRequired')"
-            />
+            <input id="name" type="text" placeholder="Name" />
             <span id="nameRequired" class="inputRequired">(*)</span>
           </div>
           <p id="nameErr" class="register__invalid">* Tên không hợp lệ</p>
 
           <!-- PHONE -->
           <div class="register__phoneNumber input-field">
-            <input
-              id="phone"
-              type="number"
-              placeholder="Phone"
-              onchange="removeAsterisk(this,'#phoneRequired')"
-            />
+            <input id="phone" type="number" placeholder="Phone" />
             <span id="phoneRequired" class="inputRequired">(*)</span>
           </div>
           <p id="phoneErr" class="register__invalid">
@@ -184,7 +147,7 @@
             </p>
           </div>
 
-          <button class="btn btn-submit" onclick="postUser()">Submit</button>
+          <button class="btn btn-submit">Submit</button>
         </div>
       </div>
       <div class="container">
@@ -317,9 +280,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- JS REGISTER -->
-    <script src="./models/Validation.js"></script>
-    <script src="./models/userRegister.js"></script>
-    <script src="./controllers/register.js"></script>
   </body>
 </html>
