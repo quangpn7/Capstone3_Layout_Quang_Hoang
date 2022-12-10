@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Capstone 2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME 4 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- MAIN FONT (INTER)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css-> font-family: 'Inter', sans-serif; -->
+    <!-- MASTER CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Carts</h2>
+      <hr />
+      <div class="table-responsive">
+        <table class="table my-5">
+            <thead class="bg-default">
+              <tr>
+                <th><input type="checkbox" /></th>
+                <th>id</th>
+                <th>image</th>
+                <th>name</th>
+                <th>price</th>
+                <th class="text-center">quantity</th>
+                <th>total</th>
+                <th>action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="mt-2">
+                <td><input type="checkbox" /></td>
+                <td>1</td>
+                <td>
+                  <img
+                    src="https://i.pravatar.cc"
+                    height="50px"
+                    width="50px"
+                    alt=""
+                  />
+                </td>
+                <td>product 1</td>
+                <td>1000$</td>
+                <td class="text-center">
+                  <button class="cart-addRemove">+</button>
+                  <span class="mx-4 cartQuantity-text">1</span>
+                  <button class="cart-addRemove">-</button>
+                </td>
+                <td>1000</td>
+                <td class="buttons">
+                  <button class="cart_action-btn cart-btnEdit mx-1">Edit</button>
+                  <button class="cart_action-btn mx-1 cart-btnDelete">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+     
+      <div class="d-flex justify-content-end">
+        <button class="btn-cartSubmit">Submit Order</button>
+      </div>
+    </div>
+  </body>
+</html>
