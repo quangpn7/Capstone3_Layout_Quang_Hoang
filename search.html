@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Register</title>
+    <title>Capstone 2</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -40,7 +40,7 @@
           class="header__content d-flex justify-content-between align-items-center"
         >
           <div class="header__logo">
-            <a href="./index.html"
+            <a href="#"
               ><img src="./assets/img/image 3.png" alt="logoCybersoft"
             /></a>
           </div>
@@ -48,7 +48,7 @@
             <i class="fa fa-shopping-cart"></i>
             <span id="item_count">(0)</span>
             <span><a href="#" id="btnLogin">Login</a></span>
-            <span><a href="#" id="btnRegister">Register</a></span>
+            <span><a href="./register.html" id="btnRegister">Register</a></span>
           </div>
         </div>
       </div>
@@ -58,13 +58,29 @@
       <div class="navigation__wrap">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="btnHome">Home</a>
+            <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="btnMen" value="men">Men</a>
+            <a
+              class="nav-link"
+              href="#"
+              id="btnMen"
+              value="men"
+              onclick="renderCategory('men')"
+              >Men</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="btnWoman" value="women">Woman</a>
+            <a
+              class="nav-link"
+              href="#"
+              id="btnWoman"
+              value="women"
+              onclick="renderCategory('women')"
+              >Woman</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="btnKid">Kid</a>
@@ -75,123 +91,99 @@
         </ul>
       </div>
     </section>
-    <!-- REGISTER -->
-    <section class="register">
-      <h1 class="register__title">Register</h1>
-      <div class="register__form register__wrap row justify-content-between">
-        <!-- LEFT -->
-        <div class="register__left col-md-6 col-lg-6>">
-          <!-- EMAIL -->
-          <div class="register__email input-field">
-            <input id="email" type="email" placeholder="Email" />
-            <span id="emailRequired" class="inputRequired">(*)</span>
-          </div>
-          <p class="register__invalid" id="emailErr"></p>
-
-          <!-- PASSWORD -->
-          <div class="register__password input-field">
-            <input id="password" type="password" placeholder="Password" />
-            <span id="passRequired" class="inputRequired">(*)</span>
-          </div>
-          <p class="register__invalid" id="passErr">* Mật khẩu không hợp lệ</p>
-
-          <div class="register__password input-field">
-            <input
-              id="confirmPassword"
-              type="password"
-              placeholder="Confirm password"
-            />
-            <span id="passConRequired" class="inputRequired">(*)</span>
-          </div>
-          <p class="register__invalid" id="confirmPassErr">
-            * Mật khẩu không trùng khớp
-          </p>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="register__right col-md-6 col-lg-6">
-          <!-- NAME -->
-          <div class="register__name input-field">
-            <input id="name" type="text" placeholder="Name" />
-            <span id="nameRequired" class="inputRequired">(*)</span>
-          </div>
-          <p id="nameErr" class="register__invalid">* Tên không hợp lệ</p>
-
-          <!-- PHONE -->
-          <div class="register__phoneNumber input-field">
-            <input id="phone" type="number" placeholder="Phone" />
-            <span id="phoneRequired" class="inputRequired">(*)</span>
-          </div>
-          <p id="phoneErr" class="register__invalid">
-            * Số điện thoại không hợp lệ
-          </p>
-
-          <!-- GENDER -->
-          <div
-            class="register__gender d-flex align-items-center input-field justify-content-center"
-          >
-            <span class="labelGender">Gender</span>
-            <input
-              type="radio"
-              id="genderMale"
-              name="gender"
-              value="true"
-              checked
-            />
-            <label for="genderMale">Male</label>
-            <input type="radio" id="genderFemale" name="gender" value="false" />
-            <label for="genderFemale">Female</label>
-            <br />
-            <p id="genderErr" class="register__invalid">
-              * Vui lòng chọn giới tính
-            </p>
-          </div>
-
-          <button class="btn btn-submit">Submit</button>
+    <!-- SEARCH BAR -->
+    <section class="search">
+      <div class="search__wrap">
+        <label for="search">Search</label>
+        <div class="d-flex mr-auto">
+          <input type="text" name="search" placeholder="Product search..." />
+          <button type="submit" class="search__btn">SEARCH</button>
         </div>
       </div>
-      <div class="container">
-        <!-- Button to Open the Modal -->
-        <!-- <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#myModal"
-        >
-          Open modal
-        </button> -->
-
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <!-- Modal Header -->
-              <div class="modal-header justify-content-center">
-                <h4 class="modal-title text-center">SUCCESSFULLY REGISTERED</h4>
+    </section>
+    <!-- SEARCH RESULT -->
+    <section class="result">
+      <div class="result__wrap">
+        <h1 class="result__title">Search result</h1>
+        <div class="result__order container">
+          <label for="price">Price</label>
+          <div
+            class="result__de d-flex align-items-center justify-content-between"
+          >
+            <p class="result__priceDe mb-0">Decrease</p>
+            <button class="btn-sort">Down</button>
+          </div>
+          <div
+            class="result__as d-flex align-items-center justify-content-between"
+          >
+            <p class="result__priceDe mb-0">Ascending</p>
+            <button class="btn-sort">Up</button>
+          </div>
+        </div>
+        <div class="result__grid row">
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </div>
-              <!-- Modal body -->
-              <div class="modal-body">
-                Please check your email for confirming the information.
-
-                <b class="mt-3 d-block">Thank you!</b>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
+            </div>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
               </div>
-
-              <!-- Modal footer -->
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary btn-submit m-0 px-2 py-1"
-                  onclick="window.location.reload()"
-                >
-                  Close
-                </button>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
+            </div>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
+            </div>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- FOOTER -->
     <footer>
       <div class="footer__wrap mx-auto">
@@ -230,6 +222,7 @@
         </p>
       </div>
     </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -255,5 +248,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- MAIN JS   -->
   </body>
 </html>

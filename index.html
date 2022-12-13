@@ -93,44 +93,58 @@
     </section>
     <!-- SLIDER -->
 
-    <section class="slider">
-      <div class="slider__bg">
-        <img src="./assets/img/image 6.png" alt="" />
-      </div>
+    <section class="slider mt-4">
       <div
         id="carouselExampleControls"
         class="carousel slide slider__content"
         data-ride="carousel"
       >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleControls"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li
+            data-target="#carouselExampleControls"
+            data-slide-to="1"
+            class=""
+          ></li>
+          <li
+            data-target="#carouselExampleControls"
+            data-slide-to="0"
+            class=""
+          ></li>
+        </ol>
         <div class="carousel-inner" id="sliderHolder">
           <div class="carousel-item active">
-            <div class="carousel-img" id="slider__img">
-              <img src="./assets/img/image 4.png" alt="" />
-            </div>
-            <div class="carousel-text">
-              <h1 id="slider__productName">Product name</h1>
-              <p id="slider__productDesc">Product description...</p>
-              <a href="#" class="btn">Buy now</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-img">
-              <img src="./assets/img/image 4.png" alt="" />
-            </div>
-            <div class="carousel-text">
-              <h1>Product name</h1>
-              <p>Product description...</p>
-              <a href="#" class="btn">Buy now</a>
+            <div class="row align-items-center">
+              <div
+                class="carousel-img col-12 col-lg-8 text-center"
+                id="slider__img"
+              >
+                <img src="./assets/img/image 5.png" alt="..." class="w-75" />
+              </div>
+              <div class="carousel-text col-12 col-lg-4 pb-5">
+                <p class="display-5" id="slider__productName">Product name</p>
+                <p id="slider__productDesc">Product description...</p>
+                <a href="#" class="btn-carousel">Buy now</a>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="carousel-img">
-              <img src="./assets/img/image 4.png" alt="" />
-            </div>
-            <div class="carousel-text">
-              <h1>Product name</h1>
-              <p>Product description...</p>
-              <a href="#" class="btn">Buy now</a>
+            <div class="row align-items-center">
+              <div
+                class="carousel-img col-12 col-lg-8 text-center"
+                id="slider__img"
+              >
+                <img src="./assets/img/image 5.png" alt="..." class="w-75" />
+              </div>
+              <div class="carousel-text col-12 col-lg-4 pb-5">
+                <p class="display-5" id="slider__productName">Product name 2</p>
+                <p id="slider__productDesc">Product description...</p>
+                <a href="#" class="btn-carousel">Buy now</a>
+              </div>
             </div>
           </div>
         </div>
@@ -157,91 +171,172 @@
     <!-- REALTED POST -->
     <section class="product">
       <div class="product__header">
-        <h1 class="text-center text-capitalize">-product feature-</h1>
+        <h1 class="d-inline-block product__title">Product feature</h1>
       </div>
       <div class="product__content">
         <div class="product__grid row" id="productHolder">
-          <div class="product__item col">
-            <div class="item-upper">
-              <img src="./assets/img/image 5.png" alt="itemImg" />
-              <div class="item-text">
-                <p>Adidas Prophere</p>
-                <span>short descript...</span>
+          <!-- standard card -->
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart" aria-hidden="true"></i>
               </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
             </div>
-            <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
-              <span class="item-price btn">85$</span>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="product__item col">
-            <div class="item-upper">
-              <img src="./assets/img/image 5.png" alt="itemImg" />
-              <div class="item-text">
-                <p>Adidas Prophere</p>
-                <span>short descript...</span>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
             </div>
-            <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
-              <span class="item-price btn">85$</span>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="product__item col">
-            <div class="item-upper">
-              <img src="./assets/img/image 5.png" alt="itemImg" />
-              <div class="item-text">
-                <p>Adidas Prophere</p>
-                <span>short descript...</span>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
             </div>
-            <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
-              <span class="item-price btn">85$</span>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="product__item col">
-            <div class="item-upper">
-              <img src="./assets/img/image 5.png" alt="itemImg" />
-              <div class="item-text">
-                <p>Adidas Prophere</p>
-                <span>short descript...</span>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
             </div>
-            <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
-              <span class="item-price btn">85$</span>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="product__item col">
-            <div class="item-upper">
-              <img src="./assets/img/image 5.png" alt="itemImg" />
-              <div class="item-text">
-                <p>Adidas Prophere</p>
-                <span>short descript...</span>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
             </div>
-            <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
-              <span class="item-price btn">85$</span>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="product__item col">
-            <div class="item-upper">
-              <img src="./assets/img/image 5.png" alt="itemImg" />
-              <div class="item-text">
-                <p>Adidas Prophere</p>
-                <span>short descript...</span>
+          <div class="product__item card shadow">
+            <div class="card-header position-relative">
+              <div class="card-icon position-absolute">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
               </div>
+              <img src="./assets/img/image 5.png" alt="itemImg" class="w-100" />
             </div>
-            <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
-              <span class="item-price btn">85$</span>
+            <div class="card-body p-0">
+              <div class="card-body-upper p-3">
+                <h3>Adidas Prophere</h3>
+                <p class="m-0">Short discription</p>
+              </div>
+              <div class="card-body-under d-flex align-items-center">
+                <button class="w-50 btn-buy">Buy now</button>
+                <div class="price-wrap w-50">
+                  <p class="font-weight-bold text-right m-0">85$</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer__wrap mx-auto">
+        <div class="row container mx-auto">
+          <div class="footer__link footer__help col-lg-4">
+            <h3>GET HELP</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__link footer__support col-lg-4">
+            <h3>SUPPORT</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Phone</a></li>
+            </ul>
+          </div>
+          <div class="footer__link footer__register col-lg-4">
+            <h3>REGISTER</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__credit py-4">
+        <p class="text-center m-0">
+          © 2022 Cybersoft All Rights Reserved | Design Theme by Trương Tấn
+          Khải.
+        </p>
+      </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
