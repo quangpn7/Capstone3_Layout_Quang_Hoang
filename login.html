@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Register</title>
+    <title>Capstone 2</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -40,7 +40,7 @@
           class="header__content d-flex justify-content-between align-items-center"
         >
           <div class="header__logo">
-            <a href="./index.html"
+            <a href="#"
               ><img src="./assets/img/image 3.png" alt="logoCybersoft"
             /></a>
           </div>
@@ -48,7 +48,7 @@
             <i class="fa fa-shopping-cart"></i>
             <span id="item_count">(0)</span>
             <span><a href="#" id="btnLogin">Login</a></span>
-            <span><a href="#" id="btnRegister">Register</a></span>
+            <span><a href="./register.html" id="btnRegister">Register</a></span>
           </div>
         </div>
       </div>
@@ -58,13 +58,29 @@
       <div class="navigation__wrap">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="btnHome">Home</a>
+            <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="btnMen" value="men">Men</a>
+            <a
+              class="nav-link"
+              href="#"
+              id="btnMen"
+              value="men"
+              onclick="renderCategory('men')"
+              >Men</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="btnWoman" value="women">Woman</a>
+            <a
+              class="nav-link"
+              href="#"
+              id="btnWoman"
+              value="women"
+              onclick="renderCategory('women')"
+              >Woman</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="btnKid">Kid</a>
@@ -75,123 +91,46 @@
         </ul>
       </div>
     </section>
-    <!-- REGISTER -->
-    <section class="register">
-      <h1 class="register__title">Register</h1>
-      <div class="register__form register__wrap row justify-content-between">
-        <!-- LEFT -->
-        <div class="register__left col-md-6 col-lg-6>">
-          <!-- EMAIL -->
-          <div class="register__email input-field">
-            <input id="email" type="email" placeholder="Email" />
-            <span id="emailRequired" class="inputRequired">(*)</span>
-          </div>
-          <p class="register__invalid" id="emailErr"></p>
-
-          <!-- PASSWORD -->
-          <div class="register__password input-field">
-            <input id="password" type="password" placeholder="Password" />
-            <span id="passRequired" class="inputRequired">(*)</span>
-          </div>
-          <p class="register__invalid" id="passErr">* Mật khẩu không hợp lệ</p>
-
-          <div class="register__password input-field">
-            <input
-              id="confirmPassword"
-              type="password"
-              placeholder="Confirm password"
-            />
-            <span id="passConRequired" class="inputRequired">(*)</span>
-          </div>
-          <p class="register__invalid" id="confirmPassErr">
-            * Mật khẩu không trùng khớp
-          </p>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="register__right col-md-6 col-lg-6">
-          <!-- NAME -->
-          <div class="register__name input-field">
-            <input id="name" type="text" placeholder="Name" />
-            <span id="nameRequired" class="inputRequired">(*)</span>
-          </div>
-          <p id="nameErr" class="register__invalid">* Tên không hợp lệ</p>
-
-          <!-- PHONE -->
-          <div class="register__phoneNumber input-field">
-            <input id="phone" type="number" placeholder="Phone" />
-            <span id="phoneRequired" class="inputRequired">(*)</span>
-          </div>
-          <p id="phoneErr" class="register__invalid">
-            * Số điện thoại không hợp lệ
-          </p>
-
-          <!-- GENDER -->
-          <div
-            class="register__gender d-flex align-items-center input-field justify-content-center"
+    <!-- LOGIN FORM -->
+    <section class="login">
+      <div class="login__wrap container">
+        <h1>Login</h1>
+        <hr />
+        <div class="login__form d-flex justify-content-center">
+          <form
+            action="submit"
+            class="d-flex flex-column justify-content-center"
           >
-            <span class="labelGender">Gender</span>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <span class="" id="emailError">Validation</span>
+            <label for="password">Password</label>
             <input
-              type="radio"
-              id="genderMale"
-              name="gender"
-              value="true"
-              checked
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
             />
-            <label for="genderMale">Male</label>
-            <input type="radio" id="genderFemale" name="gender" value="false" />
-            <label for="genderFemale">Female</label>
-            <br />
-            <p id="genderErr" class="register__invalid">
-              * Vui lòng chọn giới tính
-            </p>
-          </div>
-
-          <button class="btn btn-submit">Submit</button>
-        </div>
-      </div>
-      <div class="container">
-        <!-- Button to Open the Modal -->
-        <!-- <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#myModal"
-        >
-          Open modal
-        </button> -->
-
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <!-- Modal Header -->
-              <div class="modal-header justify-content-center">
-                <h4 class="modal-title text-center">SUCCESSFULLY REGISTERED</h4>
-              </div>
-              <!-- Modal body -->
-              <div class="modal-body">
-                Please check your email for confirming the information.
-
-                <b class="mt-3 d-block">Thank you!</b>
-              </div>
-
-              <!-- Modal footer -->
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary btn-submit m-0 px-2 py-1"
-                  onclick="window.location.reload()"
-                >
-                  Close
-                </button>
-              </div>
+            <span class="" id="passError">Validation</span>
+            <div
+              class="d-flex align-items-center justify-content-end login__option"
+            >
+              <div class="col-4"></div>
+              <a href="#" class="col-4 text-center">Register now ?</a>
+              <button class="btn-login col-4">Login</button>
             </div>
-          </div>
+            <button class="btn-login-fb position-relative">
+              <img
+                class="position-absolute"
+                src="./assets/img/facebook-icon.png"
+                alt=""
+              />
+              Continue with Facebook
+            </button>
+          </form>
         </div>
       </div>
     </section>
-
     <!-- FOOTER -->
     <footer>
       <div class="footer__wrap mx-auto">
@@ -230,6 +169,7 @@
         </p>
       </div>
     </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -255,5 +195,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- MAIN JS   -->
   </body>
 </html>
